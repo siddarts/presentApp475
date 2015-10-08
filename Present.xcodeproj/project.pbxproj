@@ -39,6 +39,13 @@
 		D1C59A0F1BC5077B00024F45 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A081BC5077B00024F45 /* ParseFacebookUtilsV4.framework */; };
 		D1C59A101BC5077B00024F45 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A091BC5077B00024F45 /* ParseTwitterUtils.framework */; };
 		D1C59A111BC5077B00024F45 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A0A1BC5077B00024F45 /* ParseUI.framework */; };
+		D1C59A4F1BC6074100024F45 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A481BC6074100024F45 /* Bolts.framework */; };
+		D1C59A501BC6074100024F45 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A491BC6074100024F45 /* Parse.framework */; };
+		D1C59A511BC6074100024F45 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A4A1BC6074100024F45 /* ParseCrashReporting.framework */; };
+		D1C59A521BC6074100024F45 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A4B1BC6074100024F45 /* ParseFacebookUtils.framework */; };
+		D1C59A531BC6074100024F45 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A4C1BC6074100024F45 /* ParseFacebookUtilsV4.framework */; };
+		D1C59A541BC6074100024F45 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A4D1BC6074100024F45 /* ParseTwitterUtils.framework */; };
+		D1C59A551BC6074100024F45 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A4E1BC6074100024F45 /* ParseUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +95,13 @@
 		D1C59A081BC5077B00024F45 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		D1C59A091BC5077B00024F45 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
 		D1C59A0A1BC5077B00024F45 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		D1C59A481BC6074100024F45 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
+		D1C59A491BC6074100024F45 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
+		D1C59A4A1BC6074100024F45 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ../ParseCrashReporting.framework; sourceTree = "<group>"; };
+		D1C59A4B1BC6074100024F45 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ../ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		D1C59A4C1BC6074100024F45 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = ../ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		D1C59A4D1BC6074100024F45 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = ../ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		D1C59A4E1BC6074100024F45 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../ParseUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,25 +115,32 @@
 				9DEE0BE31BC0BEDF003D778E /* Accounts.framework in Frameworks */,
 				9DEE0BE11BC0BED2003D778E /* libsqlite3.dylib in Frameworks */,
 				9DEE0BDF1BC0BEC9003D778E /* libz.dylib in Frameworks */,
+				D1C59A551BC6074100024F45 /* ParseUI.framework in Frameworks */,
 				9DEE0BDD1BC0BEBE003D778E /* SystemConfiguration.framework in Frameworks */,
+				D1C59A4F1BC6074100024F45 /* Bolts.framework in Frameworks */,
 				9DEE0BDB1BC0BEB6003D778E /* StoreKit.framework in Frameworks */,
 				9DEE0BD91BC0BEB0003D778E /* Security.framework in Frameworks */,
+				D1C59A501BC6074100024F45 /* Parse.framework in Frameworks */,
 				9DEE0BD71BC0BE9D003D778E /* QuartzCore.framework in Frameworks */,
 				9DEE0BD51BC0BE96003D778E /* CoreLocation.framework in Frameworks */,
 				9DEE0BD31BC0BE90003D778E /* CoreGraphics.framework in Frameworks */,
+				D1C59A531BC6074100024F45 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				9DEE0BD11BC0BE4A003D778E /* CFNetwork.framework in Frameworks */,
 				9DEE0BCF1BC0BE38003D778E /* AudioToolbox.framework in Frameworks */,
 				9DEE0BC51BC0BDFD003D778E /* Bolts.framework in Frameworks */,
 				D1C59A0C1BC5077B00024F45 /* Parse.framework in Frameworks */,
 				9DEE0BC61BC0BDFD003D778E /* Parse.framework in Frameworks */,
+				D1C59A511BC6074100024F45 /* ParseCrashReporting.framework in Frameworks */,
 				D1C59A0F1BC5077B00024F45 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				9DEE0BC71BC0BDFD003D778E /* ParseUI.framework in Frameworks */,
 				9DEE0BCB1BC0BE20003D778E /* ParseCrashReporting.framework in Frameworks */,
 				D1C59A0E1BC5077B00024F45 /* ParseFacebookUtils.framework in Frameworks */,
 				9DEE0BCC1BC0BE20003D778E /* ParseFacebookUtils.framework in Frameworks */,
+				D1C59A521BC6074100024F45 /* ParseFacebookUtils.framework in Frameworks */,
 				D1C59A0D1BC5077B00024F45 /* ParseCrashReporting.framework in Frameworks */,
 				D1C59A101BC5077B00024F45 /* ParseTwitterUtils.framework in Frameworks */,
 				9DEE0BCD1BC0BE20003D778E /* ParseFacebookUtilsV4.framework in Frameworks */,
+				D1C59A541BC6074100024F45 /* ParseTwitterUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +157,13 @@
 		9DEE0B921BC0B05C003D778E = {
 			isa = PBXGroup;
 			children = (
+				D1C59A481BC6074100024F45 /* Bolts.framework */,
+				D1C59A491BC6074100024F45 /* Parse.framework */,
+				D1C59A4A1BC6074100024F45 /* ParseCrashReporting.framework */,
+				D1C59A4B1BC6074100024F45 /* ParseFacebookUtils.framework */,
+				D1C59A4C1BC6074100024F45 /* ParseFacebookUtilsV4.framework */,
+				D1C59A4D1BC6074100024F45 /* ParseTwitterUtils.framework */,
+				D1C59A4E1BC6074100024F45 /* ParseUI.framework */,
 				9DEE0BE41BC0BEE3003D778E /* Social.framework */,
 				9DEE0BE21BC0BEDF003D778E /* Accounts.framework */,
 				9DEE0BE01BC0BED2003D778E /* libsqlite3.dylib */,
@@ -264,6 +292,7 @@
 				TargetAttributes = {
 					9DEE0B9A1BC0B05C003D778E = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9VUC3R8D65;
 					};
 					9DEE0BAF1BC0B05C003D778E = {
 						CreatedOnToolsVersion = 6.4;
@@ -446,14 +475,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/siddarthsivakumar/Downloads/parse-library-1.8.5",
 					"$(PROJECT_DIR)",
+					/Users/Annie/Documents/67475,
 				);
 				INFOPLIST_FILE = Present/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -461,14 +494,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/siddarthsivakumar/Downloads/parse-library-1.8.5",
 					"$(PROJECT_DIR)",
+					/Users/Annie/Documents/67475,
 				);
 				INFOPLIST_FILE = Present/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
