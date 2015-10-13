@@ -182,7 +182,7 @@
         <!--Courses-->
         <scene sceneID="YIH-dP-2K3">
             <objects>
-                <tableViewController storyboardIdentifier="Home" id="jcg-0L-Jrn" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Home" id="jcg-0L-Jrn" customClass="CourseTableViewController" customModule="Present" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Jsq-PU-Gcv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,7 +215,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Courses" id="9lP-M9-f4Z">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="gHZ-nu-Den"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="gHZ-nu-Den">
+                            <connections>
+                                <action selector="menuButtonTapped:" destination="jcg-0L-Jrn" id="Mcy-f7-kHh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="N7Y-t0-HkU">
                             <connections>
                                 <segue destination="uRZ-WF-KNN" kind="push" id="e6T-R2-xly"/>
@@ -358,10 +362,10 @@
             </objects>
             <point key="canvasLocation" x="1530" y="228"/>
         </scene>
-        <!--View Controller-->
+        <!--Left Side View Controller-->
         <scene sceneID="zzd-8M-uhT">
             <objects>
-                <viewController id="6Ie-a2-a8u" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftSideViewController" id="6Ie-a2-a8u" customClass="LeftSideViewController" customModule="Present" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dEV-Lt-TCr"/>
                         <viewControllerLayoutGuide type="bottom" id="Dmf-yc-gQd"/>

@@ -32,6 +32,12 @@
 		9DEE0BE11BC0BED2003D778E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BE01BC0BED2003D778E /* libsqlite3.dylib */; };
 		9DEE0BE31BC0BEDF003D778E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BE21BC0BEDF003D778E /* Accounts.framework */; };
 		9DEE0BE51BC0BEE3003D778E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BE41BC0BEE3003D778E /* Social.framework */; };
+		D11F52A71BCD9A99009C7EF2 /* LeftSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11F52A61BCD9A99009C7EF2 /* LeftSideViewController.swift */; };
+		D11F52B31BCD9B8E009C7EF2 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D11F52AB1BCD9B8E009C7EF2 /* MMDrawerBarButtonItem.m */; };
+		D11F52B41BCD9B8E009C7EF2 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D11F52AD1BCD9B8E009C7EF2 /* MMDrawerController.m */; };
+		D11F52B51BCD9B8E009C7EF2 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = D11F52B01BCD9B8E009C7EF2 /* MMDrawerVisualState.m */; };
+		D11F52B61BCD9B8E009C7EF2 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D11F52B21BCD9B8E009C7EF2 /* UIViewController+MMDrawerController.m */; };
+		D11F52BA1BCDB44C009C7EF2 /* CourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11F52B91BCDB44C009C7EF2 /* CourseTableViewController.swift */; };
 		D1C59A0B1BC5077B00024F45 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A041BC5077B00024F45 /* Bolts.framework */; };
 		D1C59A0C1BC5077B00024F45 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A051BC5077B00024F45 /* Parse.framework */; };
 		D1C59A0D1BC5077B00024F45 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C59A061BC5077B00024F45 /* ParseCrashReporting.framework */; };
@@ -88,6 +94,18 @@
 		9DEE0BE01BC0BED2003D778E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		9DEE0BE21BC0BEDF003D778E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9DEE0BE41BC0BEE3003D778E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D11F52A61BCD9A99009C7EF2 /* LeftSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideViewController.swift; sourceTree = "<group>"; };
+		D11F52A91BCD9B8D009C7EF2 /* Present-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Present-Bridging-Header.h"; sourceTree = "<group>"; };
+		D11F52AA1BCD9B8E009C7EF2 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		D11F52AB1BCD9B8E009C7EF2 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		D11F52AC1BCD9B8E009C7EF2 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		D11F52AD1BCD9B8E009C7EF2 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		D11F52AE1BCD9B8E009C7EF2 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		D11F52AF1BCD9B8E009C7EF2 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		D11F52B01BCD9B8E009C7EF2 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		D11F52B11BCD9B8E009C7EF2 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		D11F52B21BCD9B8E009C7EF2 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		D11F52B91BCDB44C009C7EF2 /* CourseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
 		D1C59A041BC5077B00024F45 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		D1C59A051BC5077B00024F45 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D1C59A061BC5077B00024F45 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -178,6 +196,7 @@
 		9DEE0B9D1BC0B05C003D778E /* Present */ = {
 			isa = PBXGroup;
 			children = (
+				D11F52A81BCD9B69009C7EF2 /* SideViewController */,
 				9DEE0BA01BC0B05C003D778E /* AppDelegate.swift */,
 				9DEE0BA21BC0B05C003D778E /* ViewController.swift */,
 				9DEE0BA41BC0B05C003D778E /* Main.storyboard */,
@@ -185,6 +204,8 @@
 				9DEE0BA91BC0B05C003D778E /* LaunchScreen.xib */,
 				9DEE0B9E1BC0B05C003D778E /* Supporting Files */,
 				9DEE0BC01BC0B0AE003D778E /* userModel.swift */,
+				D11F52A61BCD9A99009C7EF2 /* LeftSideViewController.swift */,
+				D11F52B91BCDB44C009C7EF2 /* CourseTableViewController.swift */,
 			);
 			path = Present;
 			sourceTree = "<group>";
@@ -249,6 +270,23 @@
 				9DEE0BCE1BC0BE38003D778E /* AudioToolbox.framework */,
 			);
 			name = Framework;
+			sourceTree = "<group>";
+		};
+		D11F52A81BCD9B69009C7EF2 /* SideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D11F52AA1BCD9B8E009C7EF2 /* MMDrawerBarButtonItem.h */,
+				D11F52AB1BCD9B8E009C7EF2 /* MMDrawerBarButtonItem.m */,
+				D11F52AC1BCD9B8E009C7EF2 /* MMDrawerController.h */,
+				D11F52AD1BCD9B8E009C7EF2 /* MMDrawerController.m */,
+				D11F52AE1BCD9B8E009C7EF2 /* MMDrawerController+Subclass.h */,
+				D11F52AF1BCD9B8E009C7EF2 /* MMDrawerVisualState.h */,
+				D11F52B01BCD9B8E009C7EF2 /* MMDrawerVisualState.m */,
+				D11F52B11BCD9B8E009C7EF2 /* UIViewController+MMDrawerController.h */,
+				D11F52B21BCD9B8E009C7EF2 /* UIViewController+MMDrawerController.m */,
+				D11F52A91BCD9B8D009C7EF2 /* Present-Bridging-Header.h */,
+			);
+			name = SideViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,8 +391,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEE0BA31BC0B05C003D778E /* ViewController.swift in Sources */,
+				D11F52BA1BCDB44C009C7EF2 /* CourseTableViewController.swift in Sources */,
 				9DEE0BA11BC0B05C003D778E /* AppDelegate.swift in Sources */,
+				D11F52B31BCD9B8E009C7EF2 /* MMDrawerBarButtonItem.m in Sources */,
+				D11F52B61BCD9B8E009C7EF2 /* UIViewController+MMDrawerController.m in Sources */,
+				D11F52A71BCD9A99009C7EF2 /* LeftSideViewController.swift in Sources */,
+				D11F52B41BCD9B8E009C7EF2 /* MMDrawerController.m in Sources */,
 				9DEE0BC11BC0B0AE003D778E /* userModel.swift in Sources */,
+				D11F52B51BCD9B8E009C7EF2 /* MMDrawerVisualState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -495,6 +540,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Present/Present-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -502,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -514,6 +562,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Present/Present-Bridging-Header.h";
 			};
 			name = Release;
 		};
