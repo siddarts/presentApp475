@@ -217,7 +217,7 @@
                     <navigationItem key="navigationItem" title="Courses" id="9lP-M9-f4Z">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="gHZ-nu-Den">
                             <connections>
-                                <action selector="menuButtonTapped:" destination="jcg-0L-Jrn" id="Mcy-f7-kHh"/>
+                                <action selector="menuButtonTapped:" destination="jcg-0L-Jrn" id="Ri1-va-ddC"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="N7Y-t0-HkU">
