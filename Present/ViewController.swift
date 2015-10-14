@@ -12,7 +12,11 @@ import LocalAuthentication
 import CoreBluetooth
 import CoreLocation
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextFieldDelegate {
+    
+    var localBeacon: CLBeaconRegion!
+    var beaconPeripheralData: NSDictionary!
+    var peripheralManager: CBPeripheralManager!
     
     @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
