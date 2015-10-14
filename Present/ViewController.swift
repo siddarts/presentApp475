@@ -9,16 +9,20 @@
 import UIKit
 import Parse
 import LocalAuthentication
+import CoreBluetooth
+import CoreLocation
 
 class ViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
+    @IBOutlet var signUpButton: UIButton!
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.authenticateUser()
+//        self.authenticateUser()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -27,16 +31,17 @@ class ViewController: UIViewController, UITableViewDelegate {
     }
     
     func login() {
-        var user = PFUser()
+        let user = PFUser()
         user.username = UsernameTextField.text
         user.password = PasswordTextField.text
 
-        PFUser.logInWithUsernameInBackground(UsernameTextField.text, password: PasswordTextField.text, block: {(User : PFUser?, Error : NSError?) -> Void in
+        PFUser.logInWithUsernameInBackground(UsernameTextField.text!, password: PasswordTextField.text!, block: {(User : PFUser?, Error : NSError?) -> Void in
             
             if Error == nil {
                 dispatch_async(dispatch_get_main_queue()){
-                    var storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    var home : UIViewController = storyboard.instantiateViewControllerWithIdentifier("Home") as! UIViewController
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let home : UIViewController = storyboard.instantiateViewControllerWithIdentifier("Home")
+//                        as! UIViewController
                     
                     self.presentViewController(home, animated: true, completion: nil)
                 }
@@ -52,7 +57,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     }
     
     func signUp() {
-        var user = PFUser()
+        let user = PFUser()
         user.username = UsernameTextField.text
         user.password = PasswordTextField.text
         user.email = EmailTextField.text
@@ -60,7 +65,8 @@ class ViewController: UIViewController, UITableViewDelegate {
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if let error = error {
-                let errorString = error.userInfo?["error"] as? NSString
+//               let errorString = error.userInfo["error"] as? NSString
+                _ = error.userInfo["error"] as? NSString
                 // Show the errorString somewhere and let the user try again.
             } else {
                 // Hooray! Let them use the app now.
@@ -72,126 +78,118 @@ class ViewController: UIViewController, UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //TouchID Authentication Below
     
-    
-    
-    func authenticateUser() {
-        
-        let context = LAContext()
-        
-        var error: NSError?
-        
-        let reasonString = "Authentication required to access this application"
-        
-        
-        
-        if context.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error){
-            
-            context.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString, reply: {(success, policyError) -> Void in
-                
-                if success {
-                    
-                    print ("Authentication Successful")
-                    
-                }
-                    
-                else {
-                    
-                    switch policyError!.code{
-                        
-                    case LAError.SystemCancel.rawValue:
-                        
-                        print("Authentication was cancelled by system")
-                        
-                    case LAError.UserCancel.rawValue:
-                        
-                        print("Authentication was cancelled by user")
-                        
-                    case LAError.UserFallback.rawValue:
-                        
-                        print("User selected to enter password")
-                        
-                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                            
-                            self.showPasswordAlert()
-                            
-                        })
-                        
-                    default:
-                        
-                        print("Authentication failed!")
-                        
-                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                            
-                            self.showPasswordAlert()
-                            
-                        })
-                        
-                    }
-                    
-                }
-                
-            })
-            
-        }
-            
-        else{
-            
-            print(error?.localizedDescription)
-            
-            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                
-                self.showPasswordAlert()
-                
-            })
-            
-        }
-        
+    func textField(EmailTextField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let oldText: NSString = EmailTextField.text!
+        let newText: NSString = oldText.stringByReplacingCharactersInRange(range, withString: string)
+        signUpButton.enabled = (newText.length > 0)
+        return true
     }
-    func showPasswordAlert() {
-        
-        let alertController = UIAlertController(title: "Touch ID Password", message: "Please enter your password", preferredStyle: .Alert)
-        
-        
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .Cancel) { (action) -> Void in
-            
-            if let textField = alertController.textFields?.first as! UITextField?{
-                
-                if textField.text == "password"{
-                    
-                    print("Authentication Successful")
-                    
-                }
-                    
-                else{
-                    
-                    self.showPasswordAlert()
-                    
-                }
-                
-            }
-            
-        }
-        
-        
-        
-        alertController.addAction(defaultAction)
-        
-        
-        
-        alertController.addTextFieldWithConfigurationHandler{ (textField) -> Void in
-            
-            textField.placeholder = "Password"
-            
-            textField.secureTextEntry = true
-            
-        }
-        
-        self.presentViewController(alertController, animated: true, completion: nil)
-        
+    
+    
+//    //TouchID Authentication Below
+//    func authenticateUser() {
+//        
+//        let context = LAContext()
+//        var error: NSError?
+//        let reasonString = "Authentication required to access this application"
+//        if context.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
+//            context.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString, reply: {(success, policyError) -> Void in
+//                if success {
+//                    print ("Authentication Successful", terminator: "")
+//                }
+//                else {
+//                    switch policyError!.code{
+//                    case LAError.SystemCancel.rawValue:
+//                        print("Authentication was cancelled by system", terminator: "")
+//                    case LAError.UserCancel.rawValue:
+//                        print("Authentication was cancelled by user", terminator: "")
+//                    case LAError.UserFallback.rawValue:
+//                        print("User selected to enter password", terminator: "")
+//                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+//                            self.showPasswordAlert()
+//                        })
+//                    default:
+//                        print("Authentication failed!", terminator: "")
+//                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+//                            self.showPasswordAlert()
+//                        })
+//                    }
+//                }
+//            })
+//            
+//        } else {
+////            let error = NSError.self
+//            print(error?.localizeDescription, terminator: "")
+//            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+//                self.showPasswordAlert()
+//            })
+//        }
+//    }
+//    func showPasswordAlert() {
+//        
+//        let alertController = UIAlertController(title: "Touch ID Password", message: "Please enter your password", preferredStyle: .Alert)
+//    
+//        let defaultAction = UIAlertAction(title: "OK", style: .Cancel) { (action) -> Void in
+//            if let textField = alertController.textFields?.first {
+//                if textField.text == "password"{
+//                    print("Authentication Successful", terminator: "")
+//                }
+//                else{
+//                    self.showPasswordAlert()
+//                }
+//            }
+//        }
+//    
+//        alertController.addAction(defaultAction)
+//    
+//        alertController.addTextFieldWithConfigurationHandler{ (textField) -> Void in
+//            textField.placeholder = "Password"
+//            textField.secureTextEntry = true
+//        }
+//        self.presentViewController(alertController, animated: true, completion: nil)
+//    }
+    
+    
+    //Beacon Code Below
+    
+    
+    @IBAction func startBeacon(sender: AnyObject) {
+        startLocalBeacon()
     }
+    
+    func stopLocalBeacon() {
+        peripheralManager.stopAdvertising()
+        peripheralManager = nil
+        beaconPeripheralData = nil
+        localBeacon = nil
+    }
+    
+    func startLocalBeacon() {
+        if localBeacon != nil {
+            stopLocalBeacon()
+        }
+        
+        let localBeaconUUID = "5A4BCFCE-174E-4BAC-A814-092E77F6B7E5"
+        let localBeaconMajor: CLBeaconMajorValue = 123
+        let localBeaconMinor: CLBeaconMinorValue = 456
+        
+        let uuid = NSUUID(UUIDString: localBeaconUUID)!
+        localBeacon = CLBeaconRegion(proximityUUID: uuid, major: localBeaconMajor, minor: localBeaconMinor, identifier: "Your private identifer here")
+        
+        beaconPeripheralData = localBeacon.peripheralDataWithMeasuredPower(nil)
+        peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
+    }
+    
+    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
+        if peripheral.state == .PoweredOn {
+            peripheralManager.startAdvertising(beaconPeripheralData as! [String: AnyObject]!)
+        } else if peripheral.state == .PoweredOff {
+            peripheralManager.stopAdvertising()
+        }
+    }
+    
+
 
 }
 
