@@ -33,6 +33,13 @@
 		9DEE0BDD1BC0BEBE003D778E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BDC1BC0BEBE003D778E /* SystemConfiguration.framework */; };
 		9DEE0BE31BC0BEDF003D778E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BE21BC0BEDF003D778E /* Accounts.framework */; };
 		9DEE0BE51BC0BEE3003D778E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BE41BC0BEE3003D778E /* Social.framework */; };
+		D1F49E931BCECBCB0066A28E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F49E8C1BCECBCB0066A28E /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		D1F49E941BCECBCB0066A28E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F49E8D1BCECBCB0066A28E /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		D1F49E951BCECBCB0066A28E /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F49E8E1BCECBCB0066A28E /* ParseCrashReporting.framework */; settings = {ASSET_TAGS = (); }; };
+		D1F49E961BCECBCB0066A28E /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F49E8F1BCECBCB0066A28E /* ParseFacebookUtils.framework */; settings = {ASSET_TAGS = (); }; };
+		D1F49E971BCECBCB0066A28E /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F49E901BCECBCB0066A28E /* ParseFacebookUtilsV4.framework */; settings = {ASSET_TAGS = (); }; };
+		D1F49E981BCECBCB0066A28E /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F49E911BCECBCB0066A28E /* ParseTwitterUtils.framework */; settings = {ASSET_TAGS = (); }; };
+		D1F49E991BCECBCB0066A28E /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F49E921BCECBCB0066A28E /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +83,13 @@
 		9DEE0BDC1BC0BEBE003D778E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9DEE0BE21BC0BEDF003D778E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9DEE0BE41BC0BEE3003D778E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D1F49E8C1BCECBCB0066A28E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D1F49E8D1BCECBCB0066A28E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		D1F49E8E1BCECBCB0066A28E /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		D1F49E8F1BCECBCB0066A28E /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		D1F49E901BCECBCB0066A28E /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		D1F49E911BCECBCB0066A28E /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		D1F49E921BCECBCB0066A28E /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +98,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D862ED91BCDDB9F005C0A78 /* libz.tbd in Frameworks */,
+				D1F49E931BCECBCB0066A28E /* Bolts.framework in Frameworks */,
+				D1F49E991BCECBCB0066A28E /* ParseUI.framework in Frameworks */,
 				9D862ED71BCDDB94005C0A78 /* libsqlite3.tbd in Frameworks */,
 				9DEE0BE51BC0BEE3003D778E /* Social.framework in Frameworks */,
 				9DEE0BE31BC0BEDF003D778E /* Accounts.framework in Frameworks */,
@@ -96,10 +112,15 @@
 				9DEE0BD11BC0BE4A003D778E /* CFNetwork.framework in Frameworks */,
 				9DEE0BCF1BC0BE38003D778E /* AudioToolbox.framework in Frameworks */,
 				9DEE0BC51BC0BDFD003D778E /* Bolts.framework in Frameworks */,
+				D1F49E941BCECBCB0066A28E /* Parse.framework in Frameworks */,
 				9DEE0BC61BC0BDFD003D778E /* Parse.framework in Frameworks */,
+				D1F49E971BCECBCB0066A28E /* ParseFacebookUtilsV4.framework in Frameworks */,
 				9DEE0BC71BC0BDFD003D778E /* ParseUI.framework in Frameworks */,
 				9DEE0BCB1BC0BE20003D778E /* ParseCrashReporting.framework in Frameworks */,
+				D1F49E961BCECBCB0066A28E /* ParseFacebookUtils.framework in Frameworks */,
 				9DEE0BCC1BC0BE20003D778E /* ParseFacebookUtils.framework in Frameworks */,
+				D1F49E951BCECBCB0066A28E /* ParseCrashReporting.framework in Frameworks */,
+				D1F49E981BCECBCB0066A28E /* ParseTwitterUtils.framework in Frameworks */,
 				9DEE0BCD1BC0BE20003D778E /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +138,13 @@
 		9DEE0B921BC0B05C003D778E = {
 			isa = PBXGroup;
 			children = (
+				D1F49E8C1BCECBCB0066A28E /* Bolts.framework */,
+				D1F49E8D1BCECBCB0066A28E /* Parse.framework */,
+				D1F49E8E1BCECBCB0066A28E /* ParseCrashReporting.framework */,
+				D1F49E8F1BCECBCB0066A28E /* ParseFacebookUtils.framework */,
+				D1F49E901BCECBCB0066A28E /* ParseFacebookUtilsV4.framework */,
+				D1F49E911BCECBCB0066A28E /* ParseTwitterUtils.framework */,
+				D1F49E921BCECBCB0066A28E /* ParseUI.framework */,
 				9D862ED81BCDDB9F005C0A78 /* libz.tbd */,
 				9D862ED61BCDDB94005C0A78 /* libsqlite3.tbd */,
 				9DEE0BE41BC0BEE3003D778E /* Social.framework */,
