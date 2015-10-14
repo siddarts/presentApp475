@@ -46,7 +46,7 @@ class CreateClassViewController: UIViewController {
             course.setObject(classDpt.text!, forKey: "department")
             course.setObject(classDesc.text!, forKey: "description")
             if (!(classLateAfter.text!.isEmpty)){
-                course.setObject(Int(classLateAfter.text!), forKey: "lateAfter")
+                course.setObject(Int(classLateAfter.text!)!, forKey: "lateAfter")
             }
             course.saveInBackgroundWithBlock {
                 (succeeded: Bool, error: NSError?) -> Void in

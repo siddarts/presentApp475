@@ -25,16 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
             // Override point for customization after application launch.
-            var rootViewController = self.window!.rootViewController
+//            var rootViewController = self.window!.rootViewController
             
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
             
-            var centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+            let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
             
-            var leftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LeftSideViewController") as! LeftSideViewController
+            let leftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LeftSideViewController") as! LeftSideViewController
             
-            var leftSideNav = UINavigationController(rootViewController: leftViewController)
-            var centerNav = UINavigationController(rootViewController: centerViewController)
+            let leftSideNav = UINavigationController(rootViewController: leftViewController)
+            let centerNav = UINavigationController(rootViewController: centerViewController)
             
             centerContainer = MMDrawerController(centerViewController: centerNav, leftDrawerViewController: leftSideNav)
             

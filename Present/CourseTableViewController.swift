@@ -11,7 +11,7 @@ import UIKit
 class CourseTableViewController: UITableViewController {
 
     @IBAction func menuButtonTapped(sender: AnyObject) {
-        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
     }
     override func viewDidLoad() {
