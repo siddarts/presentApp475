@@ -176,7 +176,7 @@
         <!--Navigation Controller-->
         <scene sceneID="w2l-cy-qiE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="efj-cT-RiP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="efj-cT-RiP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sgn-Nf-vql">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

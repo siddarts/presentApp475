@@ -57,13 +57,14 @@ class MenuController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if(TableArray[indexPath.row] == "Logout") {
             PFUser.logOut()
-            let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("LoginPage") as! ViewController
-            self.presentViewController(loginPage, animated: true, completion: nil)
+            let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("LoginNav")
+            self.presentViewController(loginPage!, animated: true, completion: nil)
         }
     }
 
     
     /*
+    as! ViewController
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
