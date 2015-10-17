@@ -202,28 +202,43 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseName" id="eKP-0S-9zA">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoursesTableViewCell" id="eKP-0S-9zA" customClass="CoursesTableViewCell" customModule="Present" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKP-0S-9zA" id="rd0-xX-i4a">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xo2-ig-ehn">
-                                            <rect key="frame" x="543" y="8" width="51" height="31"/>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xo2-ig-ehn">
+                                            <rect key="frame" x="522" y="6" width="51" height="31"/>
                                             <animations/>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVF-hN-cX5">
-                                            <rect key="frame" x="8" y="11" width="106" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVF-hN-cX5">
+                                            <rect key="frame" x="34" y="11" width="167" height="21"/>
                                             <animations/>
+                                            <accessibility key="accessibilityConfiguration" identifier=""/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="167" id="Das-X6-gIQ"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="RVF-hN-cX5" secondAttribute="bottom" constant="3" id="0Zn-7S-fvH"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xo2-ig-ehn" secondAttribute="trailing" constant="21" id="Irg-xr-FGq"/>
+                                        <constraint firstItem="RVF-hN-cX5" firstAttribute="top" secondItem="rd0-xX-i4a" secondAttribute="topMargin" constant="3" id="Th0-f5-xki"/>
+                                        <constraint firstItem="xo2-ig-ehn" firstAttribute="centerY" secondItem="rd0-xX-i4a" secondAttribute="centerY" id="Zsw-bF-nnv"/>
+                                        <constraint firstItem="RVF-hN-cX5" firstAttribute="leading" secondItem="rd0-xX-i4a" secondAttribute="leadingMargin" constant="26" id="oqA-Q2-hYp"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" identifier="course"/>
+                                <connections>
+                                    <outlet property="courseNameLabel" destination="RVF-hN-cX5" id="C2X-H6-3uV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
