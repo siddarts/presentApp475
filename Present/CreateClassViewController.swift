@@ -63,7 +63,7 @@ class CreateClassViewController: UIViewController {
                             _ = error.userInfo["error"] as? NSString
                             // Show the errorString somewhere and let the user try again.
                         } else {
-                            
+                            self.navigationController?.popViewControllerAnimated(true)
                         }
                     }
                     

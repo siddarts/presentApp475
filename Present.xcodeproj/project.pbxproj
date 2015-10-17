@@ -33,6 +33,7 @@
 		9DEE0BDD1BC0BEBE003D778E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BDC1BC0BEBE003D778E /* SystemConfiguration.framework */; };
 		9DEE0BE31BC0BEDF003D778E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BE21BC0BEDF003D778E /* Accounts.framework */; };
 		9DEE0BE51BC0BEE3003D778E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEE0BE41BC0BEE3003D778E /* Social.framework */; };
+		9DFC7F051BD1D5F00004ED85 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC7F041BD1D5F00004ED85 /* CoursesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		9DEE0BDC1BC0BEBE003D778E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9DEE0BE21BC0BEDF003D778E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9DEE0BE41BC0BEE3003D778E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9DFC7F041BD1D5F00004ED85 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				9DEE0B9E1BC0B05C003D778E /* Supporting Files */,
 				9DEE0BC01BC0B0AE003D778E /* userModel.swift */,
 				9D862EDA1BCDE1CB005C0A78 /* CreateClassViewController.swift */,
+				9DFC7F041BD1D5F00004ED85 /* CoursesTableViewController.swift */,
 			);
 			path = Present;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEE0BA31BC0B05C003D778E /* ViewController.swift in Sources */,
+				9DFC7F051BD1D5F00004ED85 /* CoursesTableViewController.swift in Sources */,
 				9DEE0BA11BC0B05C003D778E /* AppDelegate.swift in Sources */,
 				9DEE0BC11BC0B0AE003D778E /* userModel.swift in Sources */,
 				9D862EDB1BCDE1CB005C0A78 /* CreateClassViewController.swift in Sources */,
