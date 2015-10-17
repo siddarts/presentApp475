@@ -1,28 +1,28 @@
 //
-//  CoursesTableViewController.swift
+//  MenuController.swift
 //  Present
 //
-//  Created by Siddarth Sivakumar on 10/16/15.
+//  Created by Annie Chen on 10/16/15.
 //  Copyright © 2015 Siddarth Sivakumar. All rights reserved.
 //
 
 import UIKit
 import Parse
 
-class CoursesTableViewController: UITableViewController {
-    
-    @IBOutlet weak var menuButton: UIBarButtonItem!
-    var currentUser = PFUser.currentUser()!
+class MenuController: UITableViewController {
+
+    @IBOutlet weak var name: UILabel!
+    var TableArray = [String]()
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return TableArray.count
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCourses()
-        print(self.revealViewController())
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
+        TableArray = ["Settings","Logout"]
+        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -38,39 +38,31 @@ class CoursesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(TableArray[indexPath.row], forIndexPath: indexPath)
+        cell.textLabel?.text = TableArray[indexPath.row]
+        return cell
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
     
-    func getCourses() {
-        let userEvents = PFQuery(className: "User_Event")
-        userEvents.whereKey("userId", equalTo: currentUser.objectId!)
-        userEvents.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            
-            if error == nil {
-                // The find succeeded.
-                print("Successfully retrieved \(objects!.count) userEvents.")
-                // Do something with the found objects
-                if let userEvents = objects! as? [PFObject] {
-                    for userEvent in userEvents {
-                        print(userEvent["eventId"])
-                    }
-                }
-            } else {
-                // Log details of the failure
-                print("Error: \(error!) \(error!.userInfo)")
-            }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(TableArray[indexPath.row] == "Logout") {
+            PFUser.logOut()
+            let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("LoginPage") as! ViewController
+            self.presentViewController(loginPage, animated: true, completion: nil)
         }
-        
     }
 
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
