@@ -195,7 +195,7 @@
         <!--Courses-->
         <scene sceneID="YIH-dP-2K3">
             <objects>
-                <tableViewController storyboardIdentifier="Home" id="jcg-0L-Jrn" sceneMemberID="viewController">
+                <tableViewController id="jcg-0L-Jrn" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Jsq-PU-Gcv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -374,7 +374,7 @@
         <!--Navigation Controller-->
         <scene sceneID="GZP-Ln-FlM">
             <objects>
-                <navigationController id="fEF-hd-HZ3" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Home" id="fEF-hd-HZ3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L2U-ko-g87">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
