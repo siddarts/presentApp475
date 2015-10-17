@@ -44,10 +44,21 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
             if Error == nil {
                 dispatch_async(dispatch_get_main_queue()){
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let home : UIViewController = storyboard.instantiateViewControllerWithIdentifier("Home")
-//                        as! UIViewController
-                    
-                    self.presentViewController(home, animated: true, completion: nil)
+                    let currentUser = PFUser.currentUser()
+                    let query = PFUser.query()
+                    query!.getObjectInBackgroundWithId(currentUser?.objectId! as String!, block: { (result:PFObject?, error:NSError?) -> Void in
+                        if(result!.objectForKey("role") as! String == "Professor") {
+                            print("Teacher")
+                            let home : UIViewController = storyboard.instantiateViewControllerWithIdentifier("Home")
+                            self.presentViewController(home, animated: true, completion: nil)
+                        }
+                        else {
+                            print("Student")
+                            let studentHome : UIViewController = storyboard.instantiateViewControllerWithIdentifier("StudentNav")
+                            self.presentViewController(studentHome, animated: true, completion: nil)
+                        }
+                        
+                    })
                 }
             }else {
                 NSLog("Wrong password")

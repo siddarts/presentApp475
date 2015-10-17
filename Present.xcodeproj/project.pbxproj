@@ -44,6 +44,8 @@
 		D12320F21BD1D778002F5D5B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D12320F11BD1D778002F5D5B /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D12320F61BD1E3AD002F5D5B /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12320F51BD1E3AD002F5D5B /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
 		D12320FC1BD1F160002F5D5B /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12320FB1BD1F160002F5D5B /* SettingsController.swift */; settings = {ASSET_TAGS = (); }; };
+		D12320FE1BD2F226002F5D5B /* StudentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12320FD1BD2F226002F5D5B /* StudentHomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D12321021BD2F874002F5D5B /* StudentMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12321011BD2F874002F5D5B /* StudentMenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D1F49E931BCECBCB0066A28E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F49E8C1BCECBCB0066A28E /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		D1F49E941BCECBCB0066A28E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F49E8D1BCECBCB0066A28E /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 		D1F49E951BCECBCB0066A28E /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F49E8E1BCECBCB0066A28E /* ParseCrashReporting.framework */; settings = {ASSET_TAGS = (); }; };
@@ -105,8 +107,10 @@
 		D12320EF1BD1D777002F5D5B /* Present-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Present-Bridging-Header.h"; sourceTree = "<group>"; };
 		D12320F01BD1D778002F5D5B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		D12320F11BD1D778002F5D5B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		D12320F51BD1E3AD002F5D5B /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		D12320FB1BD1F160002F5D5B /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		D12320F51BD1E3AD002F5D5B /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ../MenuController.swift; sourceTree = "<group>"; };
+		D12320FB1BD1F160002F5D5B /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsController.swift; path = ../SettingsController.swift; sourceTree = "<group>"; };
+		D12320FD1BD2F226002F5D5B /* StudentHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentHomeViewController.swift; sourceTree = "<group>"; };
+		D12321011BD2F874002F5D5B /* StudentMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentMenuViewController.swift; sourceTree = "<group>"; };
 		D1F49E8C1BCECBCB0066A28E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		D1F49E8D1BCECBCB0066A28E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D1F49E8E1BCECBCB0066A28E /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -169,8 +173,6 @@
 		9DEE0B921BC0B05C003D778E = {
 			isa = PBXGroup;
 			children = (
-				D12320FB1BD1F160002F5D5B /* SettingsController.swift */,
-				D12320F51BD1E3AD002F5D5B /* MenuController.swift */,
 				D12320F41BD1D7AB002F5D5B /* SWRevealViewController */,
 				D12320F31BD1D78A002F5D5B /* Frameworks */,
 				9DEE0B9D1BC0B05C003D778E /* Present */,
@@ -192,6 +194,9 @@
 		9DEE0B9D1BC0B05C003D778E /* Present */ = {
 			isa = PBXGroup;
 			children = (
+				D12320FB1BD1F160002F5D5B /* SettingsController.swift */,
+				D12320F51BD1E3AD002F5D5B /* MenuController.swift */,
+				D12321011BD2F874002F5D5B /* StudentMenuViewController.swift */,
 				9DEE0BA01BC0B05C003D778E /* AppDelegate.swift */,
 				9DEE0BA21BC0B05C003D778E /* ViewController.swift */,
 				9DEE0BA41BC0B05C003D778E /* Main.storyboard */,
@@ -201,6 +206,7 @@
 				9DEE0BC01BC0B0AE003D778E /* userModel.swift */,
 				9D862EDA1BCDE1CB005C0A78 /* CreateClassViewController.swift */,
 				9DFC7F041BD1D5F00004ED85 /* CoursesTableViewController.swift */,
+				D12320FD1BD2F226002F5D5B /* StudentHomeViewController.swift */,
 			);
 			path = Present;
 			sourceTree = "<group>";
@@ -383,8 +389,10 @@
 			files = (
 				D12320FC1BD1F160002F5D5B /* SettingsController.swift in Sources */,
 				9DEE0BA31BC0B05C003D778E /* ViewController.swift in Sources */,
+				D12320FE1BD2F226002F5D5B /* StudentHomeViewController.swift in Sources */,
 				D12320F61BD1E3AD002F5D5B /* MenuController.swift in Sources */,
 				9DFC7F051BD1D5F00004ED85 /* CoursesTableViewController.swift in Sources */,
+				D12321021BD2F874002F5D5B /* StudentMenuViewController.swift in Sources */,
 				9DEE0BA11BC0B05C003D778E /* AppDelegate.swift in Sources */,
 				D12320F21BD1D778002F5D5B /* SWRevealViewController.m in Sources */,
 				9DEE0BC11BC0B0AE003D778E /* userModel.swift in Sources */,
