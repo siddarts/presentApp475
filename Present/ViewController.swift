@@ -69,8 +69,12 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if let error = error {
-//               let errorString = error.userInfo["error"] as? NSString
+                print("in error")
+//                let errorString = error.userInfo["error"] as? NSString
                 _ = error.userInfo["error"] as? NSString
+//                let alert = UIAlertController(title:"Missing Field", message:"Cannot create user..please fill required fields!", preferredStyle: UIAlertControllerStyle.Alert)
+//                alert.addAction(UIAlertAction(title:"Okay", style: UIAlertActionStyle.Default, handler:nil))
+//                self.presentViewController(alert, animated:true, completion:nil)
                 // Show the errorString somewhere and let the user try again.
             } else {
                 // Hooray! Let them use the app now.

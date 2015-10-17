@@ -460,7 +460,11 @@
 					"$(inherited)",
 					"/Users/siddarthsivakumar/Downloads/parse-library-1.8.5",
 					"$(PROJECT_DIR)",
-					/Users/Annie/Documents/67475,
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"/Users/siddarthsivakumar/Downloads/parse-library-1.8.5",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Present/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -477,6 +481,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/siddarthsivakumar/Downloads/parse-library-1.8.5",
+					"$(PROJECT_DIR)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					"/Users/siddarthsivakumar/Downloads/parse-library-1.8.5",
 					"$(PROJECT_DIR)",
