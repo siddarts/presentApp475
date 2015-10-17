@@ -192,6 +192,7 @@
 				9DEE0B9E1BC0B05C003D778E /* Supporting Files */,
 				9DEE0BC01BC0B0AE003D778E /* userModel.swift */,
 				9D862EDA1BCDE1CB005C0A78 /* CreateClassViewController.swift */,
+				9DFC7F041BD1D5F00004ED85 /* CoursesTableViewController.swift */,
 			);
 			path = Present;
 			sourceTree = "<group>";
@@ -373,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEE0BA31BC0B05C003D778E /* ViewController.swift in Sources */,
+				9DFC7F051BD1D5F00004ED85 /* CoursesTableViewController.swift in Sources */,
 				9DEE0BA11BC0B05C003D778E /* AppDelegate.swift in Sources */,
 				D12320F21BD1D778002F5D5B /* SWRevealViewController.m in Sources */,
 				9DEE0BC11BC0B0AE003D778E /* userModel.swift in Sources */,
