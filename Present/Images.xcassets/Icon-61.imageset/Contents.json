@@ -2,12 +2,6 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Icon-29.png",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "Icon-29@2x.png",
       "scale" : "2x"
     },
     {
