@@ -187,7 +187,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="course"/>
                                 <connections>
                                     <outlet property="courseNameLabel" destination="RVF-hN-cX5" id="C2X-H6-3uV"/>
-                                    <segue destination="tVk-5b-TnQ" kind="push" id="iEN-LZ-iFW"/>
+                                    <segue destination="tVk-5b-TnQ" kind="show" identifier="courseToRoster" id="iEN-LZ-iFW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -209,25 +209,42 @@
             </objects>
             <point key="canvasLocation" x="861" y="232"/>
         </scene>
-        <!--Course Title-->
+        <!--Roster-->
         <scene sceneID="ukr-CW-nbc">
             <objects>
-                <tableViewController id="tVk-5b-TnQ" sceneMemberID="viewController">
+                <tableViewController id="tVk-5b-TnQ" customClass="RosterTableViewController" customModule="Present" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6vs-1i-ohq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Fls-iG-WWe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RosterTableViewCell" id="Fls-iG-WWe" customClass="RosterTableViewCell" customModule="Present" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fls-iG-WWe" id="Pte-L3-5vL">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Student Name (Last, First)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8l-UT-fkd">
+                                            <rect key="frame" x="8" y="13" width="584" height="22"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="F8l-UT-fkd" firstAttribute="centerY" secondItem="Pte-L3-5vL" secondAttribute="centerY" id="6Ia-RT-kPQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="F8l-UT-fkd" secondAttribute="trailing" id="ZTa-1p-Hcx"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="F8l-UT-fkd" secondAttribute="leading" id="gaO-np-cNU"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="studentName" destination="F8l-UT-fkd" id="vfb-Rc-aT8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -235,7 +252,7 @@
                             <outlet property="delegate" destination="tVk-5b-TnQ" id="Dd4-lK-f95"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Course Title" id="m1Q-Dr-mv0"/>
+                    <navigationItem key="navigationItem" title="Roster" id="m1Q-Dr-mv0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEH-KP-7VL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

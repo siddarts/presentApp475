@@ -1,17 +1,17 @@
 //
-//  CoursesTableViewCell.swift
+//  RosterTableViewCell.swift
 //  Present
 //
-//  Created by Siddarth Sivakumar on 10/16/15.
+//  Created by Siddarth Sivakumar on 10/17/15.
 //  Copyright © 2015 Siddarth Sivakumar. All rights reserved.
 //
 
 import UIKit
 
-class CoursesTableViewCell: UITableViewCell {
+class RosterTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var courseNameLabel: UILabel!
 
+    @IBOutlet weak var studentName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -45,7 +45,7 @@ class CoursesTableViewController: UITableViewController {
         var allCourses : [AnyObject] = []
         let allUserEvents = PFQuery(className: "User_Event")
 //        print(allUserEvents)
-        print(currentUser)
+//        print(currentUser)
         allUserEvents.whereKey("userId", equalTo: currentUser)
         
         var userEvents : [AnyObject] = []
@@ -64,7 +64,7 @@ class CoursesTableViewController: UITableViewController {
 //            print (ue)
             
             let courseId = ue["eventId"]!?.objectId
-            print(courseId)
+//            print(courseId)
             
 //            allCourses.append(course!)
             
@@ -88,7 +88,7 @@ class CoursesTableViewController: UITableViewController {
             
         }
         
-        print(allCourses)
+//        print(allCourses)
         return allCourses
         
     }
@@ -115,6 +115,20 @@ class CoursesTableViewController: UITableViewController {
 //        cell.courseNameLabel.text = course as? String
 
         return cell
+    }
+    
+    let rosterSegueIdentifier = "courseToRoster"
+    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == rosterSegueIdentifier {
+            if let destination = segue.destinationViewController as? RosterTableViewController {
+                if let courseIndex = tableView.indexPathForSelectedRow?.row {
+//                    destination.pageTitle = courses[courseIndex]["name"] as! String
+                    destination.course = courses[courseIndex] as! PFObject
+                }
+            }
+        }
     }
 
 
