@@ -20,6 +20,33 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
     var peripheralManager: CBPeripheralManager!
     var locationManager: CLLocationManager!
     
+    @IBAction func beaconDetails(sender: AnyObject) {
+        let major = String(course["major"])
+        let minor = String(course["minor"])
+        let alert = UIAlertController(title: "Beacon Details", message: "Major: " + major + "\n" + "Minor: " + minor, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+            switch action.style{
+            case .Default:
+                print("default")
+                
+            case .Cancel:
+                print("cancel")
+                
+            case .Destructive:
+                print("destructive")
+            }
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        // Do some reloading of data and update the table view's data source
+        // Fetch more objects from a web service, for example...
+        
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
     override func viewWillAppear(animated: Bool) {
 //        self.title = pageTitle
         self.title = course["name"] as! String
@@ -38,6 +65,7 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
+        self.refreshControl?.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -107,26 +135,44 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
         let cellIdentifier = "RosterTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RosterTableViewCell
         let student = students[indexPath.row]
-        //        print (course)
         let studentFName = student["firstName"] as! String
         let studentLName = student["lastName"] as! String
         let studentPName = studentLName + ", " + studentFName
-        //        let courseId = ue["eventId"]!!.objectId as String
-        //        let course = PFQuery(className: "Event")
-        //        course.whereKey("objectId", equalTo: courseId)
-        //        let courseName = course.findObjects()
-        
-        //        let courseName = course.objectId as String!
         cell.studentName.text = studentPName
-        //        if let label = cell.courseNameLabel {
-        //            print("in here")
-        //            label.text = course as? String
-        //
-        //        }
-        //        cell.courseNameLabel.text = course as? String
+        
+        //code below to change background color
+        let allUserEvents = PFQuery(className: "User_Event")
+        allUserEvents.whereKey("eventId", equalTo: course)
+        allUserEvents.whereKey("userId", equalTo: student)
+        var userEvents : [AnyObject] = []
+        do {
+            userEvents = try allUserEvents.findObjects() as [PFObject]
+        } catch _ {
+            userEvents = []
+        }
+        let userEvent = userEvents[0]
+        let allLogs = PFQuery(className: "Log")
+        allLogs.whereKey("userEventObjectId", equalTo: userEvent)
+        var logs : [AnyObject] = []
+        do {
+            logs = try allLogs.findObjects() as [PFObject]
+        } catch _ {
+            logs = []
+        }
+        if logs.count == 0{
+            cell.backgroundColor = UIColor.redColor()
+        }else{
+            cell.backgroundColor = UIColor.greenColor()
+        }
+
         
         return cell
     }
+    
+    
+//    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        cell.backgroundColor = UIColor.greenColor()
+//    }
     
     //Code below for beacon
     func initLocalBeacon() {
@@ -163,6 +209,7 @@ class RosterTableViewController: UITableViewController, CBPeripheralManagerDeleg
             peripheralManager.stopAdvertising()
         }
     }
+    
 
 
     /*
