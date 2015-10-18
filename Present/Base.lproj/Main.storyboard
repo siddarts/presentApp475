@@ -153,7 +153,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RosterTableViewCell" id="5FS-Od-Dau" customClass="RosterTableViewCell" customModule="Present" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RosterTableViewCell" id="5FS-Od-Dau" customClass="RosterTableViewCell" customModule="Present" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5FS-Od-Dau" id="6ut-bE-yLJ">
@@ -178,7 +178,16 @@
                             <outlet property="delegate" destination="Qz4-Gv-G3c" id="oJ1-FX-j8a"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Roster" id="mE8-AG-g2j"/>
+                    <navigationItem key="navigationItem" title="Roster" id="mE8-AG-g2j">
+                        <barButtonItem key="rightBarButtonItem" title="Beacon Details" id="xzc-ij-Qid">
+                            <connections>
+                                <action selector="beaconDetails:" destination="Qz4-Gv-G3c" id="D2d-Mw-f6c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="quS-j5-9Xu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lg5-IP-8JI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,6 +259,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="0jG-zI-eC4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                     <connections>
                         <outlet property="menuButton" destination="gHZ-nu-Den" id="Wcs-hh-yur"/>
                     </connections>
