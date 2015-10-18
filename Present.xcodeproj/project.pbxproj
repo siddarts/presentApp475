@@ -157,38 +157,7 @@
 		9DEE0B921BC0B05C003D778E = {
 			isa = PBXGroup;
 			children = (
-				D1C59A481BC6074100024F45 /* Bolts.framework */,
-				D1C59A491BC6074100024F45 /* Parse.framework */,
-				D1C59A4A1BC6074100024F45 /* ParseCrashReporting.framework */,
-				D1C59A4B1BC6074100024F45 /* ParseFacebookUtils.framework */,
-				D1C59A4C1BC6074100024F45 /* ParseFacebookUtilsV4.framework */,
-				D1C59A4D1BC6074100024F45 /* ParseTwitterUtils.framework */,
-				D1C59A4E1BC6074100024F45 /* ParseUI.framework */,
-				9DEE0BE41BC0BEE3003D778E /* Social.framework */,
-				9DEE0BE21BC0BEDF003D778E /* Accounts.framework */,
-				9DEE0BE01BC0BED2003D778E /* libsqlite3.dylib */,
-				9DEE0BDE1BC0BEC9003D778E /* libz.dylib */,
-				9DEE0BDC1BC0BEBE003D778E /* SystemConfiguration.framework */,
-				9DEE0BDA1BC0BEB6003D778E /* StoreKit.framework */,
-				9DEE0BD81BC0BEB0003D778E /* Security.framework */,
-				9DEE0BD61BC0BE9D003D778E /* QuartzCore.framework */,
-				9DEE0BD41BC0BE96003D778E /* CoreLocation.framework */,
-				9DEE0BD21BC0BE8F003D778E /* CoreGraphics.framework */,
-				9DEE0BD01BC0BE4A003D778E /* CFNetwork.framework */,
-				9DEE0BCE1BC0BE38003D778E /* AudioToolbox.framework */,
-				9DEE0BC81BC0BE20003D778E /* ParseCrashReporting.framework */,
-				D1C59A041BC5077B00024F45 /* Bolts.framework */,
-				D1C59A051BC5077B00024F45 /* Parse.framework */,
-				D1C59A061BC5077B00024F45 /* ParseCrashReporting.framework */,
-				D1C59A071BC5077B00024F45 /* ParseFacebookUtils.framework */,
-				D1C59A081BC5077B00024F45 /* ParseFacebookUtilsV4.framework */,
-				D1C59A091BC5077B00024F45 /* ParseTwitterUtils.framework */,
-				D1C59A0A1BC5077B00024F45 /* ParseUI.framework */,
-				9DEE0BC91BC0BE20003D778E /* ParseFacebookUtils.framework */,
-				9DEE0BCA1BC0BE20003D778E /* ParseFacebookUtilsV4.framework */,
-				9DEE0BC21BC0BDFD003D778E /* Bolts.framework */,
-				9DEE0BC31BC0BDFD003D778E /* Parse.framework */,
-				9DEE0BC41BC0BDFD003D778E /* ParseUI.framework */,
+				D12321031BD33DD7002F5D5B /* framework */,
 				9DEE0B9D1BC0B05C003D778E /* Present */,
 				9DEE0BB31BC0B05C003D778E /* PresentTests */,
 				9DEE0B9C1BC0B05C003D778E /* Products */,
@@ -241,6 +210,45 @@
 				9DEE0BB51BC0B05C003D778E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D12321031BD33DD7002F5D5B /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				D1C59A481BC6074100024F45 /* Bolts.framework */,
+				D1C59A491BC6074100024F45 /* Parse.framework */,
+				D1C59A4A1BC6074100024F45 /* ParseCrashReporting.framework */,
+				D1C59A4B1BC6074100024F45 /* ParseFacebookUtils.framework */,
+				D1C59A4C1BC6074100024F45 /* ParseFacebookUtilsV4.framework */,
+				D1C59A4D1BC6074100024F45 /* ParseTwitterUtils.framework */,
+				D1C59A4E1BC6074100024F45 /* ParseUI.framework */,
+				9DEE0BE41BC0BEE3003D778E /* Social.framework */,
+				9DEE0BE21BC0BEDF003D778E /* Accounts.framework */,
+				9DEE0BE01BC0BED2003D778E /* libsqlite3.dylib */,
+				9DEE0BDE1BC0BEC9003D778E /* libz.dylib */,
+				9DEE0BDC1BC0BEBE003D778E /* SystemConfiguration.framework */,
+				9DEE0BDA1BC0BEB6003D778E /* StoreKit.framework */,
+				9DEE0BD81BC0BEB0003D778E /* Security.framework */,
+				9DEE0BD61BC0BE9D003D778E /* QuartzCore.framework */,
+				9DEE0BD41BC0BE96003D778E /* CoreLocation.framework */,
+				9DEE0BD21BC0BE8F003D778E /* CoreGraphics.framework */,
+				9DEE0BD01BC0BE4A003D778E /* CFNetwork.framework */,
+				9DEE0BCE1BC0BE38003D778E /* AudioToolbox.framework */,
+				9DEE0BC81BC0BE20003D778E /* ParseCrashReporting.framework */,
+				D1C59A041BC5077B00024F45 /* Bolts.framework */,
+				D1C59A051BC5077B00024F45 /* Parse.framework */,
+				D1C59A061BC5077B00024F45 /* ParseCrashReporting.framework */,
+				D1C59A071BC5077B00024F45 /* ParseFacebookUtils.framework */,
+				D1C59A081BC5077B00024F45 /* ParseFacebookUtilsV4.framework */,
+				D1C59A091BC5077B00024F45 /* ParseTwitterUtils.framework */,
+				D1C59A0A1BC5077B00024F45 /* ParseUI.framework */,
+				9DEE0BC91BC0BE20003D778E /* ParseFacebookUtils.framework */,
+				9DEE0BCA1BC0BE20003D778E /* ParseFacebookUtilsV4.framework */,
+				9DEE0BC21BC0BDFD003D778E /* Bolts.framework */,
+				9DEE0BC31BC0BDFD003D778E /* Parse.framework */,
+				9DEE0BC41BC0BDFD003D778E /* ParseUI.framework */,
+			);
+			name = framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
