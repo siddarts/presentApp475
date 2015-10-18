@@ -16,20 +16,12 @@ class CoursesTableViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         courses = getCourses()
-//        courses = ["test1", "2", "3"]
-//        for course in courses {
-//            print(course["name"] as! String)
-//        }
+        self.tableView.reloadData()
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        courses = ["test1", "2", "3"]
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +44,8 @@ class CoursesTableViewController: UITableViewController {
     func getCourses() -> [AnyObject] {
         var allCourses : [AnyObject] = []
         let allUserEvents = PFQuery(className: "User_Event")
-        print(allUserEvents)
+//        print(allUserEvents)
+        print(currentUser)
         allUserEvents.whereKey("userId", equalTo: currentUser)
         
         var userEvents : [AnyObject] = []
@@ -66,26 +59,28 @@ class CoursesTableViewController: UITableViewController {
         for ue in userEvents {
         
 //            print(ue)
-            
-            
-        //            query.includeKey("name")
+//            query.includeKey("name")
 //            query.whereKey("objectId", equalTo: ue["eventId"])
 //            print (ue)
+            
             let courseId = ue["eventId"]!?.objectId
             print(courseId)
+            
 //            allCourses.append(course!)
             
             let course = PFQuery(className: "Event")
+            
 //            course.includeKey("name")
 //            course.whereKey("objectId", equalTo: courseId!)
-            
 //            allCourses.append(ue["eventId"]!! as! PFObject)
 
             course.whereKey("objectId", equalTo: courseId!!)
 
             do {
                 let courseObject = try course.getFirstObject()
+                
 //                print(courseObject)
+                
                 allCourses.append(courseObject)
             } catch _ {
                 let courseObject = "error"
@@ -95,39 +90,6 @@ class CoursesTableViewController: UITableViewController {
         
         print(allCourses)
         return allCourses
-        
-        
-//        
-//        userEvents.findObjectsInBackgroundWithBlock {
-//            (objects: [PFObject]?, error: NSError?) -> Void in
-//            
-//            if error == nil {
-//                // The find succeeded.
-//                print("Successfully retrieved \(objects!.count) userEvents.")
-//                // Do something with the found objects
-//                if let userEvents = objects! as? [PFObject] {
-//                    for userEvent in userEvents {
-////                        print(userEvent)
-////                        print(userEvent["eventId"])
-//                        allCourses.insert(userEvent["eventId"], atIndex: 0)
-//                        print(allCourses)
-////                        print(userEvent["eventId"])
-////                        let course = PFQuery(className: "Event")
-////                        course.getObjectInBackgroundWithId(userEvent["eventId"].objectId!!) {
-////                            (courses: PFObject?, error: NSError?) -> Void in
-//////                            print(courses?["name"])
-//////                            allCourses.append(courses!)
-////                        }
-//                        
-//                    }
-//                }
-//                return allCourses
-//            } else {
-//                // Log details of the failure
-//                print("Error: \(error!) \(error!.userInfo)")
-//            }
-//        }
-//        return allCourses
         
     }
 

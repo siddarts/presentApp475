@@ -45,6 +45,10 @@ class CreateClassViewController: UIViewController {
             course.setObject(className.text!, forKey: "name")
             course.setObject(classDpt.text!, forKey: "department")
             course.setObject(classDesc.text!, forKey: "description")
+            course.setValue("5A4BCFCE-174E-4BAC-A814-092E77F6B7E5", forKey: "uuid")
+            course.setValue(randomMajMin(), forKey: "major")
+            course.setValue(randomMajMin(), forKey: "minor")
+
             if (!(classLateAfter.text!.isEmpty)){
                 course.setObject(Int(classLateAfter.text!)!, forKey: "lateAfter")
             }
@@ -70,6 +74,13 @@ class CreateClassViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func randomMajMin() -> Int {
+        let lower : UInt32 = 1
+        let upper : UInt32 = 65534
+        let randomNumber = arc4random_uniform(upper - lower) + lower
+        return Int(randomNumber)
     }
 
 

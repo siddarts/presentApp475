@@ -11,6 +11,9 @@ import UIKit
 class CoursesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var courseNameLabel: UILabel!
+    @IBAction func beaconSwitch(sender: AnyObject) {
+        
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

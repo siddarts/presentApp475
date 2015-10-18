@@ -10,6 +10,7 @@
 		9D862ED71BCDDB94005C0A78 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D862ED61BCDDB94005C0A78 /* libsqlite3.tbd */; };
 		9D862ED91BCDDB9F005C0A78 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D862ED81BCDDB9F005C0A78 /* libz.tbd */; };
 		9D862EDB1BCDE1CB005C0A78 /* CreateClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D862EDA1BCDE1CB005C0A78 /* CreateClassViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9D910B771BD33572001176FF /* RosterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D910B761BD33572001176FF /* RosterTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		9DEE0BA11BC0B05C003D778E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE0BA01BC0B05C003D778E /* AppDelegate.swift */; };
 		9DEE0BA31BC0B05C003D778E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE0BA21BC0B05C003D778E /* ViewController.swift */; };
 		9DEE0BA61BC0B05C003D778E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEE0BA41BC0B05C003D778E /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		9D862ED61BCDDB94005C0A78 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9D862ED81BCDDB9F005C0A78 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		9D862EDA1BCDE1CB005C0A78 /* CreateClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateClassViewController.swift; sourceTree = "<group>"; };
+		9D910B761BD33572001176FF /* RosterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterTableViewController.swift; sourceTree = "<group>"; };
 		9DEE0B9B1BC0B05C003D778E /* Present.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Present.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEE0B9F1BC0B05C003D778E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DEE0BA01BC0B05C003D778E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				9D862EDA1BCDE1CB005C0A78 /* CreateClassViewController.swift */,
 				9DFC7F041BD1D5F00004ED85 /* CoursesTableViewController.swift */,
 				9DFC7F081BD1ED090004ED85 /* CoursesTableViewCell.swift */,
+				9D910B761BD33572001176FF /* RosterTableViewController.swift */,
 			);
 			path = Present;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				9DEE0BA11BC0B05C003D778E /* AppDelegate.swift in Sources */,
 				9DEE0BC11BC0B0AE003D778E /* userModel.swift in Sources */,
 				9D862EDB1BCDE1CB005C0A78 /* CreateClassViewController.swift in Sources */,
+				9D910B771BD33572001176FF /* RosterTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
