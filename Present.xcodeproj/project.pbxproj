@@ -40,6 +40,9 @@
 		D188863A1BD348BA009C7693 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18886331BD348BA009C7693 /* ParseFacebookUtilsV4.framework */; settings = {ASSET_TAGS = (); }; };
 		D188863B1BD348BA009C7693 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18886341BD348BA009C7693 /* ParseTwitterUtils.framework */; settings = {ASSET_TAGS = (); }; };
 		D188863C1BD348BA009C7693 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18886351BD348BA009C7693 /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
+		D18886701BD359D9009C7693 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188866F1BD359D9009C7693 /* CoursesTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		D18886721BD35C72009C7693 /* RosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18886711BD35C72009C7693 /* RosterTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		D18886741BD35C9F009C7693 /* RosterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18886731BD35C9F009C7693 /* RosterTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,9 @@
 		D18886331BD348BA009C7693 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		D18886341BD348BA009C7693 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
 		D18886351BD348BA009C7693 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		D188866F1BD359D9009C7693 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
+		D18886711BD35C72009C7693 /* RosterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterTableViewCell.swift; sourceTree = "<group>"; };
+		D18886731BD35C9F009C7693 /* RosterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,9 @@
 				9D862EDA1BCDE1CB005C0A78 /* CreateClassViewController.swift */,
 				9DFC7F041BD1D5F00004ED85 /* CoursesTableViewController.swift */,
 				D12320FD1BD2F226002F5D5B /* StudentHomeViewController.swift */,
+				D188866F1BD359D9009C7693 /* CoursesTableViewCell.swift */,
+				D18886711BD35C72009C7693 /* RosterTableViewCell.swift */,
+				D18886731BD35C9F009C7693 /* RosterTableViewController.swift */,
 			);
 			path = Present;
 			sourceTree = "<group>";
@@ -337,10 +346,13 @@
 			files = (
 				D12320FC1BD1F160002F5D5B /* SettingsController.swift in Sources */,
 				9DEE0BA31BC0B05C003D778E /* ViewController.swift in Sources */,
+				D18886721BD35C72009C7693 /* RosterTableViewCell.swift in Sources */,
 				D12320FE1BD2F226002F5D5B /* StudentHomeViewController.swift in Sources */,
 				D12320F61BD1E3AD002F5D5B /* MenuController.swift in Sources */,
 				9DFC7F051BD1D5F00004ED85 /* CoursesTableViewController.swift in Sources */,
 				D12321021BD2F874002F5D5B /* StudentMenuViewController.swift in Sources */,
+				D18886701BD359D9009C7693 /* CoursesTableViewCell.swift in Sources */,
+				D18886741BD35C9F009C7693 /* RosterTableViewController.swift in Sources */,
 				9DEE0BA11BC0B05C003D778E /* AppDelegate.swift in Sources */,
 				D12320F21BD1D778002F5D5B /* SWRevealViewController.m in Sources */,
 				9DEE0BC11BC0B0AE003D778E /* userModel.swift in Sources */,

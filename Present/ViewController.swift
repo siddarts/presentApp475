@@ -12,22 +12,24 @@ import LocalAuthentication
 import CoreBluetooth
 import CoreLocation
 
-class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var localBeacon: CLBeaconRegion!
     var beaconPeripheralData: NSDictionary!
     var peripheralManager: CBPeripheralManager!
+    var roles = ["Professor", "Student"]
     
     @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet var signUpButton: UIButton!
     
+    @IBOutlet weak var RolePicker: UIPickerView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.authenticateUser()
-        // Do any additional setup after loading the view, typically from a nib.
+        RolePicker.delegate = self
+        RolePicker.dataSource = self
     }
     
     @IBAction func loginAction(sender: AnyObject) {
@@ -76,6 +78,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
         user.username = UsernameTextField.text
         user.password = PasswordTextField.text
         user.email = EmailTextField.text
+        user.setValue(roles[RolePicker.selectedRowInComponent(0)], forKey: "role")
         
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
@@ -105,6 +108,20 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, UITextField
         return true
     }
     
+    
+    //Code for Picker
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return roles.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return roles[row]
+    }
+
     
 //    //TouchID Authentication Below
 //    func authenticateUser() {
